@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MajesticChrome</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="nav-bar" style="user-select: none;">
+            <div class="logo-container"><img src="icons/tempicon.png" class="logo" alt="Логотип"></div>
+            <div id="nav-binder" class="nav-text">Биндер</div>
+            <div id="nav-search" class="nav-text">Поиск</div>
+            <div id="nav-settings" class="nav-text">Настройки</div>
+        </div>
+    </div>
+    <div id="content-binder" class="content">
+        <div id="bindsContainer">
+            <!-- Сюда будут добавляться бинды -->
+        </div>
+        <button id="addBindButton">Добавить бинд</button>
+    </div>
+    <div id="content-search" class="content" style="display:none;">
+        <h1 style="color: #ffffff; text-align: center;">В разработке</h1>
+    </div>
+    <div id="content-settings" class="content" style="display:none;">
+        <div class="setting-option">
+            <input type="checkbox" id="option1">
+            <label for="option1">Установить секретный дизайн</label>
+        </div>
+        <div class="setting-option" style="display: none;">
+            <input type="checkbox" id="option2">
+            <label for="option2">Расширенная информация пользователей</label>
+        </div>
+        <div class="setting-server">
+            <label for="serverSelect" style="margin-right: 5px;">Выберите сервер:</label>
+            <select id="serverSelect" name="servers">
+                <option value="server0">Сервер не выбран</option>
+                <option value="server1">Сервер 1</option>
+                <option value="server2">Сервер 2</option>
+                <option value="server3">Сервер 3</option>
+                <option value="server4">Сервер 4</option>
+                <option value="server5">Сервер 5</option>
+                <option value="server6">Сервер 6</option>
+                <option value="server7">Сервер 7</option>
+                <option value="server8">Сервер 8</option>
+                <option value="server9">Сервер 9</option>
+            </select>
+        </div>
+        <div class="setting-server">
+            <label for="serverSelect" style="margin-right: 5px;">Настройка конфигов биндера:</label>
+            <div class="button-config">
+                <!-- Добавлены id для кнопок -->
+                <button type="button" id="importBtn" class="button-cfg">Импорт</button>
+                <button type="button" id="exportBtn" class="button-cfg">Экспорт</button>
+                <button type="button" id="bodyColor" class="button-cfg">Цвет фона</button>
+            </div>
+            <div id="change-body-color" class="hidden">
+                <label for="colorPicker"></label>
+                <input type="color" id="colorPicker">
+            </div>
+            <!-- Элемент для выбора файла -->
+            <input type="file" id="fileInput" style="display: none;" />
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+
+
+</html>
